@@ -14,42 +14,42 @@
 <body>
     <div class="container" style="background-image:url('backgroung.png')">
         <div class="form-box">
-            <h2>EverydayChef</h2>
+            <h2 id="title">EverydayChef</h2>
             <form>
                 <div class="input-group">
-                    <div class="input-field">
+                    <div id="nameField_First" class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Firstname" required>
+                        <input type="text" placeholder="Firstname">
                     </div>
-                    <div class="input-field">
+                    <div id="nameField_Last" class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input placeholder="Lastname" type="text" required>
+                        <input placeholder="Lastname" type="text">
                     </div>
-                    <div class="input-field">
+                    <div id="nameField_Middle" class="input-field">
                         <i class="fa-solid fa-user"></i>
                         <input placeholder="Middlename" type="text">
                     </div>
                     <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input placeholder="Email" type="email" required>
-                    </div>
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input placeholder="Password" type="password" required>
-                    </div>
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input placeholder="Retype-password" type="password2" required>
-                    </div>
-                    <div class="input-field">
                         <i class="fa-solid fa-circle-user"></i>
-                        <input placeholder="Username" type="text" required>
+                        <input placeholder="Username" type="text">
                     </div>
-                    <p>Lost password<a href="#">Click Here</a></p>
+                    <div id="emailField" class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input placeholder="Email" type="email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input placeholder="Password" type="password">
+                    </div>
+                    <div id="password2Field" class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input placeholder="Retype-password" type="password2">
+                    </div>
+                    <p>Forgot password<a href="#">Click Here</a></p>
                 </div>
                 <div class="btn-field">
-                    <button type="button">Sign Up</button>
-                    <button type="button">Sign In</button>
+                    <button type="button" id="signupBtn">Sign Up</button>
+                    <button type="button" id="signinBtn"class="disable">Sign In</button>
                 </div>
             </form>
         </div>
