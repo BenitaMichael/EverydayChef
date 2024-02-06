@@ -25,7 +25,7 @@ Benita Micheal - [Github]() / [Twitter]() / [Linkedin]()
 
 - <b>Documentation</b> : <a href="https://trello.com/b/tGzHKSCw/cook-book">Trello</a>
 - <b>Testing and Feedback mechanism</b> :
--   Inclusion of a feedback mechanism to gather user input on usability, content quality, and overall experience.
--   Regular testing to identify and address technical issues, ensuring a smooth and reliable user experience.
--   Utilization of user feedback for continuous platform improvement.
+-     Inclusion of a feedback mechanism to gather user input on usability, content quality, and overall experience.
+-     Regular testing to identify and address technical issues, ensuring a smooth and reliable user experience.
+-     Utilization of user feedback for continuous platform improvement.
 - <b>Acknowledgements</b> : Elo Agbawe Idiodi - [Linkedin](https://www.linkedin.com/in/elo-agbawe-idiodi-77a231156/)

@@ -27,7 +27,7 @@ signupBtn.onclick = function(){
 	nameField_Middle.style.maxHeight = "60px";
 	emailField.style.maxHeight = "60px";
 	password2Field.style.maxHeight = "60px";
-	title.innerHTML = "EverydayChef";
+	title.innerHTML = "Create account";
 	signupBtn.classList.remove("disable");
 	signinBtn.classList.add("disable");
 }
