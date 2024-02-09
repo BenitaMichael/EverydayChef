@@ -63,7 +63,7 @@ input{
 }
 
 form p{
-	padding: 4px;
+	padding: 5px;
 	text-align: left;
 	font-size: 13px;
 }
@@ -71,16 +71,16 @@ form p{
 form p a{
 	text-decoration: none;
 	color:#0a2472;
+	padding: 4px;
 }
 
 .btn-field{
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
 }
 
 .btn-field button{
-	flex-basis: 48%;
+	flex-basis: 100%;
 	background:#0a2472 ;
 	color: #fff;
 	height: 30px;
@@ -89,11 +89,6 @@ form p a{
 	outline: 0;
 	cursor: pointer;
 	transition: 1s;
-}
-
-.btn-field button.disable{
-	background: #eaeaea;
-	color: #555;
 }
 
 .input-group{
