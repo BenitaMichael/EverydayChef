@@ -20,6 +20,7 @@
         $stmt->execute();
         echo "Thank you for registering...";
         $stmt->close();
-        $conn->close();
     }
+
+    
 ?>

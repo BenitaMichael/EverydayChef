@@ -31,3 +31,17 @@ signupBtn.onclick = function(){
 	signupBtn.classList.remove("disable");
 	signinBtn.classList.add("disable");
 }
+
+  // JavaScript to handle button clicks
+  
+  addEventListener('click', function() {
+    alert('Sign Up Successful!');
+    window.location.href = 'search.html';
+  }
+  );
+  
+  addEventListener('click', function() {
+    alert('Sign In Successful!');
+    window.location.href = 'search.html';
+  }
+  );
