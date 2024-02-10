@@ -1,18 +1,17 @@
-let title = document.getElementById("title");
 let signinBtn= document.getElementById("signinBtn");
+let title = document.getElementById("title");
+let Password = document.getElementById("Password");
 let emailField= document.getElementById("emailField");
-let Password = document.getElementById("Password")
-
 
 
 signinBtn.onclick = function(){
-	emailField.style.maxHeight = "0";
-	Password.style.maxHeight = "0";
+	emailField.style.maxHeight = "60px";
+	Password.style.maxHeight = "60px";
 	title.innerHTML = "EverydayChef";
 }
   
   addEventListener('click', function() {
-    alert('Sign In Successful!');
+    alert('Successful!');
     window.location.href = 'search.html';
   }
   );
