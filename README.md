@@ -28,7 +28,7 @@ EverydayChef is a culinary haven, offering users a seamless platform to discover
 - Continuous Improvement: Benefit from ongoing updates and enhancements based on user feedback, ensuring that EverydayChef remains a vibrant and valuable resource with culinary interests.
 
 ### Authors
-Abasilim Kosisochukwu Obaejeogu - [Github](https://github.com/kabasilim) / [Twitter](https://twitter.com/Abasilim_Odogwu) / [Linkedin](https://www.linkedin.com/in/kosisochukwu-abasilim/)  
+Abasilim Kosisochukwu Obaejeogu - [Github](https://github.com/kabasilim) / [Twitter](https://x.com/Abasilim_Odogwu) / [Linkedin](https://www.linkedin.com/in/kosisochukwu-abasilim/)  
 Benita Micheal - [Github](https://github.com/BenitaMichael) / [Twitter](https://x.com/Benita_Michael_) / [Linkedin](https://www.linkedin.com/in/benita-enubiaka-75b73023a)
 
 
@@ -38,4 +38,3 @@ Benita Micheal - [Github](https://github.com/BenitaMichael) / [Twitter](https://
 -     Regular testing to identify and address technical issues, ensuring a smooth and reliable user experience.
 -     Utilization of user feedback for continuous platform improvement.
 - <b>Acknowledgements</b> : Elo Agbawe Idiodi - [Linkedin](https://www.linkedin.com/in/elo-agbawe-idiodi-77a231156/)
-
