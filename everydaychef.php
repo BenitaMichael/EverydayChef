@@ -9,7 +9,7 @@
 
 
     //CONNECT DATABASE
-    $conn = new mysqli('localhost','root','','everydaychef');
+    $conn = new mysqli('localhost','root','','','everydaychef');
     if ($conn->connect_error){
         die('Connection Fialed : ' '.$conn->connect_error');
     }
@@ -20,6 +20,7 @@
         $stmt->execute();
         echo "Thank you for registering...";
         $stmt->close();
+        $conn->close();
     }
 
     
