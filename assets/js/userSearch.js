@@ -2,30 +2,40 @@ const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
 const mealDetails = document.querySelector('.meal-details-content');
 const recipeExitBtn = document.getElementById('recipe-exit-btn');
-
-recipeExitBtn.addEventListener('click', () => {
-    mealDetails.parentElement.classList.remove('showRecipe');
-});
+const breakfastBtn = document.getElementById('breakfast-btn');
+const lunchBtn = document.getElementById('lunch-btn');
+const dinnerBtn = document.getElementById('dinner-btn');
+const snackBtn = document.getElementById('snack-btn');
+const APP_ID = "";
+const APP_key = "";
+const API_URL = "https://api.edamam.com/search";
+// const APP_ID = process.env.APP_ID;
+// const APP_key = process.env.APP_key;
 
 
 // get meal list that matches with the ingredient
 searchBtn.addEventListener('click', async() =>{
     let searchInputText = document.getElementById('search-input').value.trim();
-    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputText}`)
+    const response = await fetch(`${API_URL}?q=${searchInputText}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=20`)
     const data = await response.json()
     .then(data => {
-        // console.log(data)
+        console.log(data)
         let html = "";
-        if(data.meals){
-            data.meals.forEach(meal => {
+        if(data.hits){
+            data.hits.forEach(meal => {
                 html += `
                     <div class = "meal-item" data-id = "${meal.idMeal}">
                         <div class = "meal-image">
-                            <img src = "${meal.strMealThumb}" alt = "food">
+                            <img src = "${meal.recipe.image}" alt = "meal image">
                         </div>
                         <div class = "meal-name">
-                            <h3>${meal.strMeal}</h3>
-                            <a href = "#" class = "recipe-btn">Get Recipe</a>
+                            <h3>${meal.recipe.label}</h3>
+                            <div class="meal-info">
+                            <p><span>Cusine Type: </span> ${meal.recipe.cuisineType}</p>
+                            <p><span>Meal Type: </span> ${meal.recipe.mealType}</p>
+                            <p><span>Total Calories: </span> ${meal.recipe.calories.toFixed(2)}</p>
+                            </div>
+                            <a target="_blank" href = "${meal.recipe.url}" class = "recipe-btn">Get Recipe</a>
                         </div>
                     </div>
                 `;
@@ -41,35 +51,68 @@ searchBtn.addEventListener('click', async() =>{
 });
 
 
-// get recipe of the meal
-mealList.addEventListener('click', async(e)=>{
-    e.preventDefault();
-    if(e.target.classList.contains('recipe-btn')){
-        let mealItem = e.target.parentElement.parentElement;
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
-        const data = await response.json()
-        .then(data => mealRecipePopUp(data.meals));
-    }
+
+
+// Function to fetch recipes based on meal type
+async function fetchRecipes(mealType) {
+    const response = await fetch(`${API_URL}?q=${mealType}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=20`);
+    const data = await response.json();
+    return data.hits;
+}
+
+// Event listeners for meal type buttons
+breakfastBtn.addEventListener('click', async () => {
+    const breakfastRecipes = await fetchRecipes('breakfast');
+    displayRecipes(breakfastRecipes);
 });
 
-// Details popUp
-mealRecipePopUp = (meal) =>{
-    // console.log(meal);
-    meal = meal[0];
-    let html = `
-        <h2 class = "recipe-title">${meal.strMeal}</h2>
-        <p class = "recipe-category">${meal.strCategory}</p>
-        <div class = "recipe-instruct">
-            <h3>Instructions:</h3>
-            <p>${meal.strInstructions}</p>
-        </div>
-        <div class = "recipe-meal-image">
-            <img src = "${meal.strMealThumb}" alt = "">
-        </div>
-        <div class = "recipe-link">
-            <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
-        </div>
-    `;
-    mealDetails.innerHTML = html;
-    mealDetails.parentElement.classList.add('showRecipe');
+lunchBtn.addEventListener('click', async () => {
+    const lunchRecipes = await fetchRecipes('lunch');
+    displayRecipes(lunchRecipes);
+});
+
+dinnerBtn.addEventListener('click', async () => {
+    const dinnerRecipes = await fetchRecipes('dinner');
+    displayRecipes(dinnerRecipes);
+});
+
+snackBtn.addEventListener('click', async () => {
+    const snackRecipes = await fetchRecipes('snack');
+    displayRecipes(snackRecipes);
+});
+
+// Display recipes on the webpage
+function displayRecipes(recipes) {
+    let html = "";
+    if (recipes.length > 0) {
+        recipes.forEach(meal => {
+            html += `
+                <div class="meal-item" data-id="${meal.idMeal}">
+                    <div class="meal-image">
+                        <img src="${meal.recipe.image}" alt="meal image">
+                    </div>
+                    <div class="meal-name">
+                        <h3>${meal.recipe.label}</h3>
+                        <div class="meal-info">
+                            <p><span>Cuisine Type:</span> ${meal.recipe.cuisineType}</p>
+                            <p><span>Meal Type:</span> ${meal.recipe.mealType}</p>
+                            <p><span>Total Calories:</span> ${meal.recipe.calories.toFixed(2)}</p>
+                        </div>
+                        <a target="_blank" href="${meal.recipe.url}" class="recipe-btn">Get Recipe</a>
+                    </div>
+                </div>
+            `;
+        });
+        mealList.classList.remove('notFound');
+    } else {
+        html = "Sorry, we do not have any provisions for that yet!";
+        mealList.classList.add('notFound');
+    }
+
+    mealList.innerHTML = html;
 }
+
+
+// detailsExitBtn.addEventListener('click', () => {
+//     mealDetails.parentElement.classList.remove('showRecipe');
+// });
