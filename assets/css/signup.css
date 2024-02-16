@@ -15,7 +15,7 @@
 }
 
 .form-box{
-	width: 90%;
+	width: 100%;
 	max-width: 450px;
 	position: absolute;
 	top: 50%;
@@ -24,16 +24,15 @@
 	background: #F5F5F5;
 	padding: 50px,60px,70px;
 	text-align: center;
-	border-radius: 150px;
+	border-radius: 100px;
 }
 
 .form-box h2{
 	font-size: 40px;
-	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 	color:#ce1212;
 	position: relative;
-	padding: 15px;
 }
 
 .input-field{
@@ -59,16 +58,17 @@ input{
 }
 
 .input-field i{
-	margin-left: 25px;
+	margin-left: 10px;
 	color: #ce1212;
+	margin-right: 15px;
 }
 
 
 .btn-field{
-	width: 50%;
+	width: 65%;
 	display: flex;
-	margin-left: 110px;
-	padding: 20px;
+	margin-left: 80px;
+	padding: 50px;
 }
 
 .btn-field button{
@@ -84,5 +84,5 @@ input{
 }
 
 .input-group{
-	height: 300px;
+	height: 280px;
 }
