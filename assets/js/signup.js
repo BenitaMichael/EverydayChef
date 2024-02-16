@@ -17,9 +17,3 @@ signupBtn.onclick = function(){
 	password2Field.style.maxHeight = "60px";
 	title.innerHTML = "Create account";
 }
-  
-  addEventListener('click', function() {
-    alert('Sign Up Successful!');
-    window.location.href = 'sign_in.html';
-  }
-  );

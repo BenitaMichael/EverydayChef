@@ -9,9 +9,3 @@ signinBtn.onclick = function(){
 	Password.style.maxHeight = "60px";
 	title.innerHTML = "EverydayChef";
 }
-  
-  addEventListener('click', function() {
-    alert('Successful!');
-    window.location.href = 'search.html';
-  }
-  );
