@@ -9,19 +9,17 @@
 
 
     //CONNECT DATABASE
-    $conn = new mysqli('localhost','root','','','everydaychef');
-    if ($conn->connect_error){
-        die('Connection Fialed : ' '.$conn->connect_error');
-    }
-    else{
-        $stmt - $conn->prepare("insert into registration(Firstname, Lastname, Middlename, Username, Email, Password, Password2)
-        value(?,?,?,?,?,?,?)")
-        $stmt->bind_param("sssssss",$Firstname, $Lastname, $Middlename, $Username, $Email, $Password, $Password2);
-        $stmt->execute();
-        echo "Thank you for registering...";
-        $stmt->close();
-        $conn->close();
-    }
-
-    
+	$conn = new mysqli('localhost','root','','everydaychef');
+	if($conn->connect_error){
+		echo "$conn->connect_error";
+		die("Connection Failed : ". $conn->connect_error);
+	} else {
+		$stmt = $conn->prepare("insert into registration(Firstname, Lastname, Middlename, Email, Password, Password2) values(?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("ssssss", $Firstname, $Lastname, $Middlenmae, $Email, $Password, $Password2);
+		$execval = $stmt->execute();
+		echo $execval;
+		echo "Registration successfully";
+		$stmt->close();
+		$conn->close();
+	}
 ?>
