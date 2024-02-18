@@ -1,26 +1,12 @@
 <?php
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Firstname = $_POST['Firstname'];
-    $Lastname = $_POST['Lastname'];
-    $Middlename = $_POST['Middlename'];
     $Email = $_POST['Email'];
     $Password = $_POST['Password'];
-    $Password2 = $_POST['Password2'];
 
     // Validation
     // Initialize an array to store validation errors
     $errors = [];
-
-    // Validate Firstname
-    if (empty($Firstname)) {
-        $errors[] = "Firstname is required";
-    }
-
-    // Validate Lastname
-    if (empty($Lastname)) {
-        $errors[] = "Lastname is required";
-    }
 
     // Validate Email
     if (empty($Email)) {
@@ -36,11 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Password must be at least 8 characters long";
     }
 
-    // Validate Password2 (Password confirmation)
-    if ($Password !== $Password2) {
-        $errors[] = "Passwords do not match";
-    }
-
     // If there are validation errors, display them
     if (!empty($errors)) {
         foreach ($errors as $error) {
@@ -52,23 +33,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $dbpassword = "";
         $dbname = "everydaychef";
 
+        // Create connection
         $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
 
+        // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "INSERT INTO registration (Firstname, Lastname, Middlename, Email, Password, Password2) VALUES ('$Firstname', '$Lastname', '$Middlename', '$Email', '$Password', '$Password2')";
+        // Prepare and execute SQL statement
+        $sql = "SELECT * FROM registration WHERE Email = ? AND Password = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ss", $Email, $Password);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-        if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
+        // Check if any rows were returned
+        if ($result->num_rows > 0) {
+            // Authentication successful
+            echo "Authentication successful";
+            // Redirect the user to a different page
+            header("Location: ../index.html");
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            // Authentication failed
+            echo "Authentication failed";
         }
 
+        // Close connections
+        $stmt->close();
         $conn->close();
-        header("Location: ../index.html");
-        exit;
     }
 }
 ?>
