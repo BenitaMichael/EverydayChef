@@ -49,10 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
 
-        $servername = "localhost";
-        $dbusername = "root";
-        $dbpassword = "";
-        $dbname = "everydaychef";
+        $servername = "sql200.infinityfree.com ";
+        $dbusername = "if0_36010932";
+        $dbpassword = "Whogoesyou";
+        $dbname = "if0_36010932_everydaychef";
 
         $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
 
