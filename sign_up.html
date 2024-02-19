@@ -2,48 +2,76 @@
 <html lang="en">
 
 <head>
+    <!-- Define character set and viewport for better rendering -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensure compatibility with Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>EverydayChef signup and sign in</title>
+     <!-- Link to custom CSS file for styling -->
     <link rel="stylesheet" href="assets/css/signup.css">
+    <!-- Include Font Awesome icons -->
     <script src="https://kit.fontawesome.com/8511428fb7.js" crossorigin="anonymous"></script>
+    <!-- Include custom JavaScript file for functionality -->
     <script defer src="assets/js/signup.js"></script>
 </head>
 
 <body>
+     <!-- Main container with background image -->
     <div class="container" style="background-image:url('assets/img/backgroung.png')">
         <div class="form-box">
+            <!-- Title of the form -->
             <h2 id="title">Create account</h2>
+              <!-- Sign-up form -->
             <form action="./forms/register.php" method="post">
                 <div class="input-group">
+                     <!-- Input field for first name -->
                     <div id="nameField_First" class="input-field">
+                         <!-- User icon -->
                         <i class="fa-solid fa-user"></i>
+                         <!-- First name input -->
                         <input type="text" placeholder="Firstname" name="Firstname" required>
                     </div>
+                    <!-- Input field for last name -->
                     <div id="nameField_Last" class="input-field">
+                         <!-- User icon -->
                         <i class="fa-solid fa-user"></i>
+                         <!-- Last name input -->
                         <input placeholder="Lastname" type="text" name="Lastname" required>
                     </div>
+                    <!-- Input field for middle name -->
                     <div id="nameField_Middle" class="input-field">
+                         <!-- User icon -->
                         <i class="fa-solid fa-user"></i>
+                        <!-- Middle name input -->
                         <input placeholder="Middlename" type="text" name="Middlename">
                     </div>
+                    <!-- Input field for email -->
                     <div id="emailField" class="input-field">
+                        <!-- Email icon -->
                         <i class="fa-solid fa-envelope"></i>
+                         <!-- Email input -->
                         <input placeholder="Email" type="email" name="Email" required>
                     </div>
+                    <!-- Input field for password -->
                     <div class="input-field">
+                        <!-- Lock icon -->
                         <i class="fa-solid fa-lock"></i>
+                        <!-- Password input -->
                         <input placeholder="Password" type="password" name="Password" required>
                     </div>
+                    <!-- Input field for re-typing password -->
                     <div id="password2Field" class="input-field">
+                         <!-- Lock icon -->
                         <i class="fa-solid fa-lock"></i>
+                         <!-- Retype-password input -->
                         <input placeholder="Retype-password" type="password" name="Password2" required>
                     </div>
+                      <!-- Link to sign-in page for existing users -->
                     <div>
                         <p>Already have an account? <a href="sign_in.html">Sign-In here</a></p>
                     </div>
+                    <!-- Button field for sign-up -->
                     <div class="btn-field">
                         <button type="submit" id="signupBtn">Sign Up</button>
                     </div>
@@ -53,5 +81,4 @@
         </div>
     </div>
 </body>
-
 </html>
