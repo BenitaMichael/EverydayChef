@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Send a password reset email to the user
     $subject = "Password Reset";
     $message = "To reset your password, click on the following link: https://everydaychef.netlify.app/reset_password.php?email=" . urlencode($email);
-    $headers = "From: obaejeoguabasilim@gmailcom";
+    $headers = "From: obaejeoguabasilim@gmail.com";
     
     // Send the email
     if (mail($email, $subject, $message, $headers)) {

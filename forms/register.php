@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Password = $_POST['Password'];
     $Password2 = $_POST['Password2'];
 
+
     // Validation
     // Initialize an array to store validation errors
     $errors = [];
@@ -47,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo $error . "<br>";
         }
     } else {
+
         $servername = "localhost";
         $dbusername = "root";
         $dbpassword = "";
@@ -58,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "INSERT INTO registration (Firstname, Lastname, Middlename, Email, Password, Password2) VALUES ('$Firstname', '$Lastname', '$Middlename', '$Email', '$Password', '$Password2')";
+        $sql = "INSERT INTO registration (Firstname, Lastname, Middlename, Email, Password, Password2) VALUES ('$Firstname', '$Lastname', '$Middlename', '$Email', '$hash', '$hash')";
 
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
