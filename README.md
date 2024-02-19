@@ -42,5 +42,5 @@ Benita Micheal - [Github](https://github.com/BenitaMichael) / [Twitter](https://
 -     Regular testing to identify and address technical issues, ensuring a smooth and reliable user experience.
 -     Utilization of user feedback for continuous platform improvement.
 - <b>Acknowledgements</b> : Elo Agbawe Idiodi helped to organize the project - [Linkedin](https://www.linkedin.com/in/elo-agbawe-idiodi-77a231156/)
-- Abasilim Ogochukwu Ruth for helping in the documentation -[Linkedin](htpps://www.linkedin.com/in/ruth-abasilim/)
+- Abasilim Ogochukwu Ruth for helping in the documentation - [Linkedin] (htpps://www.linkedin.com/in/ruth-abasilim/)
 - Ajala John Fiyinfoluwa helped to debug  -[Linkedin](https://www.linkedin.com/in/kodaas)
