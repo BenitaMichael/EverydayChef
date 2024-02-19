@@ -43,6 +43,7 @@ Benita Micheal - [Github](https://github.com/BenitaMichael) / [Twitter](https://
 -     Utilization of user feedback for continuous platform improvement.
 - <b>Acknowledgements</b> : Elo Agbawe Idiodi helped to organize the project - [Linkedin](https://www.linkedin.com/in/elo-agbawe-idiodi-77a231156/)
 - Abasilim Ogochukwu Ruth for helping in the documentation - [Linkedin](htpps://www.linkedin.com/in/ruth-abasilim/)
+- Abasilim Ogochukwu Ruth for helped in the documentation-[Linkedin](https://www.linkedin.com/in/ruth-abasilim)
 - Ajala John Fiyinfoluwa helped to debug  -[Linkedin](https://www.linkedin.com/in/kodaas)
 ### Screenshot
 <img width="953" alt="image" src="https://github.com/BenitaMichael/EverydayChef/assets/77329878/bd366f35-6002-47ae-959a-a7d1761851db">
