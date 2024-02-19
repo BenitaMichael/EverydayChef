@@ -117,7 +117,7 @@ body{
 }
 .meal-image img{
     width: 70%;
-    margin: 0 auto;
+    margin: 18px auto;
     display: block;
 }
 .meal-name{
@@ -188,8 +188,8 @@ body{
 
 
 /* Elements created by js */
-.showRecipe{
-    display: block;
+.meal-info span{
+    font-weight: 700;
 }
 
 .meal-details-content{
@@ -253,9 +253,7 @@ body{
     -ms-border-radius: 4.8px;
     -o-border-radius: 4.8px;
 }
-.recipe-instruct{
-    padding: 16px 0;
-}
+
 .recipe-meal-image img{
     width: 100px;
     height: 100px;

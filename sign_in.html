@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>EverydayChef signup and sign in</title>
-    <link rel="stylesheet" href="assets/css/signup.css">
+    <link rel="stylesheet" href="assets/css/signin.css">
     <script src="https://kit.fontawesome.com/8511428fb7.js" crossorigin="anonymous"></script>
-    <script defer src="assets/js/signup.js"></script>
+    <script defer src="assets/js/signin.js"></script>
 </head>
 
 <body>
     <div class="container" style="background-image:url('assets/img/backgroung.png')">
         <div class="form-box">
             <h2 id="title">EverydayChef</h2>
-            <form action="forms/connect.php" method="post">
+            <form action="./forms/signin.php" method="post">
                 <div class="input-group">
                     <div id="emailField" class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input placeholder="Email" type="email" name="Email">
+                        <input placeholder="Email" type="email" name="Email" required>
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input placeholder="Password" type="password" name="Password" >
+                        <input placeholder="Password" type="password" name="Password" required>
                     </div>
                     <div>
-                        <p>Forgot password<a href="#">Click Here</a></p>
+                        <p>Forgot password<a href="Retrieve_password.html">Click Here</a></p>
                     </div>
                     <div class="btn-field">
                         <button type="submit" id="signinBtn">Sign In</button>
