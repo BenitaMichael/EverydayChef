@@ -45,15 +45,16 @@ Benita Micheal - [Github](https://github.com/BenitaMichael) / [Twitter](https://
 - Abasilim Ogochukwu Ruth for helped in the documentation-[Linkedin](https://www.linkedin.com/in/ruth-abasilim)
 - Ajala John Fiyinfoluwa helped to debug  -[Linkedin](https://www.linkedin.com/in/kodaas)
 ### Screenshot
+<b>SIGN UP PAGE</b><br>
 <img width="953" alt="image" src="https://github.com/BenitaMichael/EverydayChef/assets/77329878/bd366f35-6002-47ae-959a-a7d1761851db">
-- SIGN UP PAGE
 
+<br><b>SIGN IN PAGE</b><br>
 <img width="959" alt="image" src="https://github.com/BenitaMichael/EverydayChef/assets/77329878/cdc77493-b8c8-4800-aa9f-4ee404be704b">
-- SIGN IN PAGE
 
+<br><b>RETRIEVE PASSWORD PAGE</b><br>
 <img width="958" alt="image" src="https://github.com/BenitaMichael/EverydayChef/assets/77329878/cec629e1-16b0-4965-8c74-7595a7c57b97">
--RETRIEVE PASSWORD PAGE
 
+<br><b>LANDING PAGE</b><br>
 <img width="959" alt="image" src="https://github.com/BenitaMichael/EverydayChef/assets/77329878/176ec68a-eec8-457c-88a2-d5bb9a5bb265">
 
 <img width="951" alt="image" src="https://github.com/BenitaMichael/EverydayChef/assets/77329878/7a2469e2-a7d4-4c8b-b403-b431d7b54975">
@@ -69,3 +70,9 @@ Benita Micheal - [Github](https://github.com/BenitaMichael) / [Twitter](https://
 <img width="959" alt="image" src="https://github.com/BenitaMichael/EverydayChef/assets/77329878/cd80fddf-1f4a-44ad-9282-24becf844719">
 
 <img width="956" alt="image" src="https://github.com/BenitaMichael/EverydayChef/assets/77329878/907c13fb-3fdb-4cb1-ae0b-00de2a00be02">
+ 
+ <br><b> SERACH PAGE</b><br>
+<img width="959" alt="image" src="https://github.com/BenitaMichael/EverydayChef/assets/77329878/04ea7220-92b6-4b99-b92a-ef6b8c0f8d6e">
+
+<br><b>USER SERACH PAGE</b><br>
+<img width="946" alt="image" src="https://github.com/BenitaMichael/EverydayChef/assets/77329878/d2f07ebf-e7a1-4d83-b1e7-be9df4211e3d">
