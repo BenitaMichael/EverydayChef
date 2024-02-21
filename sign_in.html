@@ -2,32 +2,48 @@
 <html lang="en">
 
 <head>
+     <!-- Define character set and viewport for better rendering -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Ensure compatibility with Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>EverydayChef signup and sign in</title>
-    <link rel="stylesheet" href="assets/css/signup.css">
+    <!-- Link to custom CSS file for styling -->
+    <link rel="stylesheet" href="assets/css/signin.css">
+     <!-- Include Font Awesome icons -->
     <script src="https://kit.fontawesome.com/8511428fb7.js" crossorigin="anonymous"></script>
-    <script defer src="assets/js/signup.js"></script>
+    <!-- Include custom JavaScript file for functionality -->
+    <script defer src="assets/js/signin.js"></script>
 </head>
 
 <body>
-    <div class="container" style="background-image:url('assets/img/backgroung.png')">
+     <!-- Main container with background image -->
+    <div class="container" style="background-image:url('assets/img/gallery-1.jpg')">
         <div class="form-box">
+            <!-- Title of the form -->
             <h2 id="title">EverydayChef</h2>
-            <form action="forms/everydaychef.php" method="post">
+             <!-- Sign-in form -->
+            <form action="./forms/signin.php" method="post">
                 <div class="input-group">
+                     <!-- Input field for email -->
                     <div id="emailField" class="input-field">
+                        <!-- Email icon -->
                         <i class="fa-solid fa-envelope"></i>
+                        <!-- Email input -->
                         <input placeholder="Email" type="email" name="Email" required>
                     </div>
+                    <!-- Input field for password -->
                     <div class="input-field">
+                        <!-- Lock icon -->
                         <i class="fa-solid fa-lock"></i>
+                        <!-- Password input -->
                         <input placeholder="Password" type="password" name="Password" required>
                     </div>
+                    <!-- Forgot password link -->
                     <div>
-                        <p>Forgot password<a href="#">Click Here</a></p>
+                        <p>Forgot password<a href="Retrieve_password.html">Click Here</a></p>
                     </div>
+                    <!-- Button field for sign-in -->
                     <div class="btn-field">
                         <button type="submit" id="signinBtn">Sign In</button>
                     </div>
@@ -36,5 +52,4 @@
         </div>
     </div>
 </body>
-
 </html>
