@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Authentication successful
             echo "Authentication successful";
             // Redirect the user to a different page
-             header("Location: ../index.html");
+             header("Location: ../userSearch.html");
         } else {
             // Authentication failed
             echo "Authentication failed";
